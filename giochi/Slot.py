@@ -1,3 +1,6 @@
+# DA MIGLIORARE: animazioni, per rendere il gioco più coinvolgente.
+
+
 import random
 import math
 
