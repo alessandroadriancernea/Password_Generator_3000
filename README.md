@@ -2,15 +2,16 @@
 
 ## 1. 🎨Titolo del progetto
 
-Password Generator 3000
+► 𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫 𝟑𝟎𝟎𝟎
 
 ## 2. 🚩Obiettivo
 
-Apre una GUI e ti chiede di scegliere la lunghezza della password, la complessità e blocca le password troppo facili, poi prova a decifrarle
+╔𝙻'𝚘𝚋𝚒𝚎𝚝𝚝𝚒𝚟𝚘 𝚎' 𝚏𝚊𝚛'𝚍𝚎𝚌𝚒𝚍𝚎𝚛𝚎 𝚊𝚕𝚕'𝚞𝚝𝚎𝚗𝚝𝚎 𝚜𝚎 𝚟𝚞𝚘𝚕𝚎 𝚐𝚎𝚗𝚎𝚛𝚊𝚛𝚎 𝚞𝚗𝚊 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍,                                          ╟𝚒𝚗𝚌𝚊𝚜𝚘 𝚙𝚘𝚒 𝚙𝚞ò 𝚍𝚎𝚌𝚒𝚍𝚎𝚛𝚎 𝚍𝚒 𝚏𝚊𝚛𝚎 𝚞𝚗 𝚊𝚝𝚝𝚊𝚌𝚌𝚘 𝚍𝚒 𝚍𝚎𝚌𝚘𝚍𝚒𝚏𝚒𝚌𝚊 𝚋𝚛𝚞𝚝𝚎-𝚏𝚘𝚛𝚌𝚎 𝚗𝚘𝚗 𝚒𝚗𝚝𝚎𝚕𝚕𝚒𝚐𝚎𝚗𝚝𝚎               ╟𝚘𝚙𝚙𝚞𝚛𝚎 𝚏𝚊𝚛𝚐𝚕𝚒 𝚞𝚜𝚊𝚛𝚎 𝚞𝚗𝚊 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚌𝚑𝚎 𝚐𝚒à 𝚑𝚊                                                                                              ╚𝚜𝚎𝚖𝚙𝚛𝚎 𝚙𝚎𝚛 𝚕𝚊 𝚍𝚎𝚌𝚘𝚍𝚒𝚏𝚒𝚌𝚊 𝚋𝚛𝚞𝚝𝚎-𝚏𝚘𝚛𝚌𝚎 𝚗𝚘𝚗 𝚒𝚗𝚝𝚎𝚕𝚕𝚒𝚐𝚎𝚗𝚝𝚎.
 
-## 3. 👥Attori
+## 3. Attori👥
 
-Utente -> Decide se vuole generare una password randomica o usare la sua password e in tutti e due i casi vien
+ᴜᴛᴇɴᴛᴇ
+↪
 
 ## 4. 📜Requisiti funzionali
 
