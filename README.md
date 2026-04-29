@@ -10,7 +10,7 @@ Apre una GUI e ti chiede di scegliere la lunghezza della password, la complessit
 
 ## 3. Attori
 
-Utente
+Utente -> Decide se vuole generare una password randomica o usare la sua password e in tutti e due i casi vien
 
 ## 4. Requisiti funzionali
 
