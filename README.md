@@ -1,84 +1,63 @@
+# Documento dei Requisiti - Progetto 3M
+
 ## 1. 🎨Titolo del progetto
-► 𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫 𝟑𝟎𝟎𝟎 🔐
+
+► 𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫 𝟑𝟎𝟎𝟎
 
 ## 2. 🚩Obiettivo
-╔══════════════════════════════════════════╗
-║ L'obiettivo è permettere all'utente di ║
-║ scegliere se generare una password oppure║
-║ usare una già esistente. ║
-║ ║
-║ Dopo la scelta, può decidere di eseguire ║
-║ una simulazione di attacco brute-force ║
-║ non intelligente per testarne la ║
-║ sicurezza. ║
-╚══════════════════════════════════════════╝
+
+𝙻'𝚘𝚋𝚒𝚎𝚝𝚝𝚒𝚟𝚘 𝚎' 𝚏𝚊𝚛'𝚍𝚎𝚌𝚒𝚍𝚎𝚛𝚎 𝚊𝚕𝚕'𝚞𝚝𝚎𝚗𝚝𝚎 𝚜𝚎 𝚟𝚞𝚘𝚕𝚎 𝚐𝚎𝚗𝚎𝚛𝚊𝚛𝚎 𝚞𝚗𝚊 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍,                                          
+𝚒𝚗𝚌𝚊𝚜𝚘 𝚙𝚘𝚒 𝚙𝚞ò 𝚍𝚎𝚌𝚒𝚍𝚎𝚛𝚎 𝚍𝚒 𝚏𝚊𝚛𝚎 𝚞𝚗 𝚊𝚝𝚝𝚊𝚌𝚌𝚘 𝚍𝚒 𝚍𝚎𝚌𝚘𝚍𝚒𝚏𝚒𝚌𝚊 𝚋𝚛𝚞𝚝𝚎-𝚏𝚘𝚛𝚌𝚎 𝚗𝚘𝚗 𝚒𝚗𝚝𝚎𝚕𝚕𝚒𝚐𝚎𝚗𝚝𝚎               
+𝚘𝚙𝚙𝚞𝚛𝚎 𝚏𝚊𝚛𝚐𝚕𝚒 𝚞𝚜𝚊𝚛𝚎 𝚞𝚗𝚊 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚌𝚑𝚎 𝚐𝚒à 𝚑𝚊                                                           
+𝚜𝚎𝚖𝚙𝚛𝚎 𝚙𝚎𝚛 𝚕𝚊 𝚍𝚎𝚌𝚘𝚍𝚒𝚏𝚒𝚌𝚊 𝚋𝚛𝚞𝚝𝚎-𝚏𝚘𝚛𝚌𝚎 𝚗𝚘𝚗 𝚒𝚗𝚝𝚎𝚕𝚕𝚒𝚐𝚎𝚗𝚝𝚎.
 
 ## 3. Attori👥
-⋰ ᴜᴛᴇɴᴛᴇ ⇨ Decide cosa fare:
-• Generare una password (Facile / Media / Difficile)
-• Inserire una password propria
-• Testare la password con brute-force ⋱
+
+ᴜᴛᴇɴᴛᴇ ⇨ 𝖫'𝗎𝗍𝖾𝗇𝗍𝖾 𝖽𝖾𝖼𝗂𝖽𝖾 𝗌𝖾 𝗀𝖾𝗇𝖾𝗋𝖺𝗋𝖾 𝗎𝗇𝖺 𝗉𝖺𝗌𝗌𝗐𝗈𝗋𝖽 𝗌𝖼𝖾𝗀𝗅𝗂𝖾𝗇𝖽𝗈 𝗍𝗋𝖺 𝟥 𝖽𝗂𝖿𝖿𝗂𝖼𝗈𝗅𝗍à
+(𝖥𝖺𝖼𝗂𝗅𝖾, 𝗆𝖾𝖽𝗂𝖺, 𝖽𝗂𝖿𝖿𝗂𝖼𝗂𝗅𝖾), 𝖺𝗉𝗉𝖾𝗇𝖺 𝗀𝖾𝗇𝖾𝗋𝖺𝗍𝖺 𝗅𝖺 𝗉𝖺𝗌𝗌𝗐𝗈𝗋𝖽 𝗅'𝗎𝗍𝖾𝗇𝗍𝖾 𝗉𝗎ò 𝖽𝖾𝖼𝗂𝖽𝖾𝗋𝖾 𝗌𝖾 𝖽𝖾𝖼𝗈𝖽𝗂𝖿𝗂𝖼𝖺𝗋𝗅𝖺 𝗈 𝗇𝗈.
 
 ## 4. 📜Requisiti funzionali
-╔════════ Funzionalità principali ════════╗
-║ • Menu iniziale numerico ║
-║ • Generazione password casuale ║
-║ • Verifica sicurezza password ║
-║ • Simulazione brute-force ║
-║ • Output risultati/statistiche ║
-╚════════════════════════════════════════╝
+
+𝖥𝗎𝗇𝗓𝗂𝗈𝗇𝖺𝗅𝗂𝗍à 𝗉𝗋𝗂𝗇𝖼𝗂𝗉𝖺𝗅𝗂:
+- Avviare il programma con un menu a numeri.
+- Gestire input dell'utente (se vuole verificare la password o generarla nuova).
+- Mostrare risultati o statistiche
 
 ## 5. 📋Gestione del progetto
-⋆ Interfaccia semplice (CMD)
-⋆ Gestione errori input
-⋆ Codice diviso in moduli/file
-⋆ Commenti base nel codice
+
+- Interfaccia a console chiara
+- Gestione degli errori di input
+- Codice organizzato in più file(Package, Moduli)
+- Commenti e documentazione base
+
 ## 6. 🗂️Scelta del package Python
 
-╔══════════════════════════════════════════╗
-║ 📦 random → generazione password ║
-║ 📦 string → lettere, numeri, simboli ║
-║ 📦 time → animazioni e simulazioni ║
-║ ║
-║ ✔ Semplici da usare e già inclusi ║
-╚══════════════════════════════════════════╝
+- Package scelto: `Random, String, Time`
+- Perché lo abbiamo scelto: `Gli abbiamo scelti perchè ci facilitano il lavoro e non sono troppo complessi`
+- Come lo usiamo nel progetto: `Ad esempio se la password va bene è verde, random per generare la password in modo casuale e String perchè ci fa usare le stringhe meglio e Time perchè ci servivano delle animazioni.`
 
 ## 7. 📑Suddivisione del lavoro
-⋰ Alessandro ⇨
-• Generazione password
-• Brute-force
 
-⋰ Felipe ⇨
-• Input utente
-• Verifica password ⋱
+- Studente A: `Alessandro` Si occupa del input password casuale e della decifrazione
+- Studente B: `Felipe` Gestione Password dell'utente (verifica password)
 
 ## 8. ⚒️Flusso del programma
-╔══════════════════════════════════════╗
-║ 1 → Genera password ║
-║ 2 → Verifica password ║
-║ 3 → Test brute-force ║
-║ 4 → Esci ║
-╚══════════════════════════════════════╝
 
-⇩
-Scelta utente → Esecuzione → Risultati
+- Menu iniziale (Dove l'utente deve selezionare un numero).
+- Può generare password, può verificare se la tua password è sicura o uscire dal programma. `Potrebbe esserci altro`
+- Risultati finali.
 
-## 9. ⏱️Cronoprogramma
-⋆ Settimana 1 → Idea + ricerca
-⋆ Settimana 2 → Progettazione
-⋆ Settimana 3 → Sviluppo + test
-⋆ Settimana 4 → Rifinitura + consegna
+## 9. ⏱️Cronoprogramma (Gantt semplificato)
+
+- Settimana 1: scelta del tema, ricerca package, stesura requisiti
+- Settimana 2: progettazione, divisione del lavoro, avvio sviluppo
+- Settimana 3: completamento funzionalità, test, integrazione package
+- Settimana 4: rifinitura, documentazione, consegna
 
 ## 10. 📝Note aggiuntive
-╔══════════════════════════════════════════╗
-║ ✔ Tema semplice (solo CMD) ║
-║ ✔ Possibile ASCII Art ║
-║ ║
-║ 💡 Idee future: ║
-║ • Interfaccia grafica base (GUI) ║
-║ ║
-║ ⚠️ Difficoltà: ║
-║ • Brute-force ║
-║ • Organizzazione codice ║
-║ • Uso dei package ║
-╚══════════════════════════════════════════╝
+
+Aggiungi qui commenti sul tema, sulle idee future o sulle difficoltà previste.
+
+Tema semplice senza schermata avanzata, tutto sul CMD e statico, potrebbe contenere ASCII art
+Idee future: se possibile mettere una schermata basica fuori dal cmd
+Difficoltà previste: decodif, organizzare tutto nel main() e imparare i package
