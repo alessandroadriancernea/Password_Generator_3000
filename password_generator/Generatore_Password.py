@@ -1,13 +1,13 @@
 import random
 import string
 import time
-import colorama
+from colorama import Fore, Style
 
-# Codici ANSI per i colori
-BLUE = '\033[34m'
-MAGENTA = '\033[35m'
-YELLOW = '\033[33m'
-RESET = '\033[0m'
+# Codici colore usando colorama
+BLUE = Fore.BLUE
+MAGENTA = Fore.MAGENTA
+YELLOW = Fore.YELLOW
+RESET = Style.RESET_ALL
 
 def genera_password():
     print("Scegli la difficoltà della password:")
