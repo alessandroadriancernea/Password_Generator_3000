@@ -1,38 +1,41 @@
-# Questo programma chiede all'utente di inserire una password e verifica se è sicura
-# se la password a almeno 8 caratteri alla password viene assegnato il livello 1
-# se la password contiene almeno una lettera maiuscola alla password viene assegnato il livello 2
-# se la password contiene almeno 5 lettere minuscole alla password viene assegnato il livello 3
-# se la password contiene almeno 5 numeri alla password viene assegnato il livello 4
-# se la password contiene almeno un carattere speciale alla password viene assegnato il livello 5
-# e alla fine viene stampato il livello di sicurezza della password se 5 la password è molto sicura se 4 la password è sicura se 3 la password è debole se 2 la password è molto debole se 1 la password è estremamente debole
+"""Funzioni per valutare la sicurezza di una password.
 
+Questo modulo espone `password_personale_con_sicurezza(password)` che prende
+una password (stringa) e restituisce `True` se raggiunge un livello di sicurezza
+considerato accettabile (livello >= 4), altrimenti `False`.
 
-password = input("Inserisci la tua password: ")
-livello = 0
+Il codice evita qualsiasi `input()` a livello di modulo, quindi è sicuro importarlo
+senza avviare interazioni con l'utente.
+"""
 
-if len(password) >= 8:
-    livello = 1
+def password_personale_con_sicurezza(password: str) -> bool:
+    """Valuta la password e restituisce True se è considerata sicura.
 
-if any(char.isupper() for char in password):
-    livello = 2
+    Regole (semplice valutazione a punti):
+    - >=8 caratteri -> +1
+    - almeno una lettera maiuscola -> +1
+    - almeno 5 lettere minuscole -> +1
+    - almeno 5 cifre -> +1
+    - almeno un carattere speciale -> +1
 
-if sum(char.islower() for char in password) >= 5:
-    livello = 3
+    Ritorna True se il punteggio è >= 4.
+    """
+    livello = 0
 
-if sum(char.isdigit() for char in password) >= 5:
-    livello = 4
+    if len(password) >= 8:
+        livello = 1
 
-if any(char in "!@#$%^&*()-_=+[]{}|;:'\",.<>?/" for char in password):
-    livello = 5
+    if any(char.isupper() for char in password):
+        livello = max(livello, 2)
 
-if livello == 5:
-    print("La tua password è molto sicura!")
-elif livello == 4:
-    print("La tua password è sicura!")
-elif livello == 3:
-    print("La tua password è debole!")
-elif livello == 2:
-    print("La tua password è molto debole!")
-elif livello == 1:
-    print("La tua password è estremamente debole!")
+    if sum(char.islower() for char in password) >= 5:
+        livello = max(livello, 3)
+
+    if sum(char.isdigit() for char in password) >= 5:
+        livello = max(livello, 4)
+
+    if any(char in "!@#$%^&*()-_=+[]{}|;:'\",.<>?/" for char in password):
+        livello = max(livello, 5)
+
+    return livello >= 4
     

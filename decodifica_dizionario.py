@@ -1,79 +1,76 @@
-from wordfreq import word_frequency
-import time
+﻿# Decodifica_dizionario = attacco basato su parole comuni da dizionario
+
+from time import time
+
+from wordfreq import top_n_list
 
 
-def analizza_frase(frase, lingua="it"):
-    parole = frase.lower().split()
+def format_time(seconds):
+    """Restituisce una rappresentazione del tempo in ore, minuti e secondi."""
+    seconds = int(seconds)
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    seconds = seconds % 60
 
-    totale_score = 0
-    analisi = []
-
-    for parola in parole:
-        freq = word_frequency(parola, lingua)
-
-        # trasformiamo frequenza in "difficoltà"
-        if freq == 0:
-            difficolta = "sconosciuta (molto rara)"
-            score = 5
-        elif freq > 1e-2:
-            difficolta = "molto comune"
-            score = 1
-        elif freq > 1e-4:
-            difficolta = "media"
-            score = 2
-        elif freq > 1e-6:
-            difficolta = "rara"
-            score = 3
-        else:
-            difficolta = "molto rara"
-            score = 4
-
-        totale_score += score
-
-        analisi.append((parola, freq, difficolta))
-
-    return analisi, totale_score
+    if hours > 0:
+        return f"{hours}h {minutes}m {seconds}s"
+    return f"{minutes}m {seconds}s"
 
 
-def stima_tentativi(score_totale):
-    # simulazione teorica (NON brute force reale)
-    base = 10 ** score_totale
-    return base
+def load_common_words(language='en', count=2000000):
+    """Carica una lista di parole comuni nella lingua richiesta."""
+    try:
+        return top_n_list(language, count)
+    except Exception:
+        print(f"Attenzione: lingua '{language}' non riconosciuta. Uso inglese.")
+        return top_n_list('en', count)
 
 
-def stima_tempo(tentativi, speed_per_sec=1_000_000):
-    secondi = tentativi / speed_per_sec
+def dictionary_attack(password_target: str, language: str = 'en', count: int = 2000000):
+    """Prova a indovinare la password usando parole comuni dal dizionario."""
+    word_list = load_common_words(language, count)
+    total_words = len(word_list)
+    start_time = time()
 
-    if secondi < 60:
-        return f"{secondi:.4f} secondi"
-    elif secondi < 3600:
-        return f"{secondi/60:.2f} minuti"
-    elif secondi < 86400:
-        return f"{secondi/3600:.2f} ore"
-    else:
-        return f"{secondi/86400:.2f} giorni"
+    for attempt_index, current_word in enumerate(word_list, start=1):
+        elapsed_time = time() - start_time
+        speed = attempt_index / elapsed_time if elapsed_time > 0 else 0
+        words_left = total_words - attempt_index
+        eta_seconds = words_left / speed if speed > 0 else 0
+
+        print(
+            f"\rTentativi: {attempt_index}/{total_words} | "
+            f"Velocità: {speed:.2f} tentativi/s | "
+            f"Rimanente stimato: {format_time(eta_seconds)}",
+            end="",
+            flush=True,
+        )
+
+        if current_word == password_target:
+            total_time = time() - start_time
+            print("\n\n✅ Password trovata!")
+            print(f"Password: {current_word}")
+            print(f"Tentativi totali: {attempt_index}")
+            print(f"Tempo impiegato: {format_time(total_time)}")
+            return current_word
+
+    print("\n\n🔎 Password non trovata nella lista delle parole comuni.")
+    return None
 
 
 def main():
-    frase = input("Inserisci una frase o 'password': ")
+    password_to_search = input("> Inserisci la password da cercare: ").strip()
+    if not password_to_search:
+        print("Devi inserire una password valida.")
+        return
 
-    print("\n🔍 Analisi in corso...\n")
-    time.sleep(0.5)
+    language = input("Lingua del dizionario (es. en, it) [en]: ").strip().lower()
+    if not language:
+        language = "en"
 
-    analisi, score = analizza_frase(frase)
-
-    for parola, freq, diff in analisi:
-        print(f"- {parola:15} | freq: {freq:.8f} | {diff}")
-
-    tentativi = stima_tentativi(score)
-    tempo = stima_tempo(tentativi)
-
-    print("\n📊 RISULTATI")
-    print(f"Punteggio complessivo: {score}")
-    print(f"Numero stimato combinazioni: {tentativi:.2e}")
-    print(f"Tempo stimato di attacco teorico: {tempo}")
-
-    print("\n⚠️ Nota: è una simulazione matematica, non un attacco reale.")
+    count = 2000000
+    print("Caricamento in corso...")
+    dictionary_attack(password_to_search, language=language, count=count)
 
 
 if __name__ == "__main__":

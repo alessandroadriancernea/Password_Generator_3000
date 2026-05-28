@@ -1,61 +1,63 @@
 # Documento dei Requisiti - Progetto 3M
 
-## 1. 🎨Titolo del progetto
+## 1. 🎨 Titolo del progetto
 
 ► 𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫 𝟑𝟎𝟎𝟎
 
-## 2. 🚩Obiettivo
+## 2. 🚩 Obiettivo
 
-𝙻'𝚘𝚋𝚒𝚎𝚝𝚝𝚒𝚟𝚘 𝚎' 𝚏𝚊𝚛'𝚍𝚎𝚌𝚒𝚍𝚎𝚛𝚎 𝚊𝚕𝚕'𝚞𝚝𝚎𝚗𝚝𝚎 𝚜𝚎 𝚟𝚞𝚘𝚕𝚎 𝚐𝚎𝚗𝚎𝚛𝚊𝚛𝚎 𝚞𝚗𝚊 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍,                                          
-𝚒𝚗𝚌𝚊𝚜𝚘 𝚙𝚘𝚒 𝚙𝚞ò 𝚍𝚎𝚌𝚒𝚍𝚎𝚛𝚎 𝚍𝚒 𝚏𝚊𝚛𝚎 𝚞𝚗 𝚊𝚝𝚝𝚊𝚌𝚌𝚘 𝚍𝚒 𝚍𝚎𝚌𝚘𝚍𝚒𝚏𝚒𝚌𝚊 𝚋𝚛𝚞𝚝𝚎-𝚏𝚘𝚛𝚌𝚎 𝚗𝚘𝚗 𝚒𝚗𝚝𝚎𝚕𝚕𝚒𝚐𝚎𝚗𝚝𝚎               
-𝚘𝚙𝚙𝚞𝚛𝚎 𝚏𝚊𝚛𝚐𝚕𝚒 𝚞𝚜𝚊𝚛𝚎 𝚞𝚗𝚊 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚌𝚑𝚎 𝚐𝚒à 𝚑𝚊                                                           
-𝚜𝚎𝚖𝚙𝚛𝚎 𝚙𝚎𝚛 𝚕𝚊 𝚍𝚎𝚌𝚘𝚍𝚒𝚏𝚒𝚌𝚊 𝚋𝚛𝚞𝚝𝚎-𝚏𝚘𝚛𝚌𝚎 𝚗𝚘𝚗 𝚒𝚗𝚝𝚎𝚕𝚕𝚒𝚐𝚎𝚗𝚝𝚎.
+L'obiettivo è far decidere all'utente se vuole generare una password oppure se preferisce eseguire un attacco di decodifica brute-force non intelligente. In alternativa, l'utente può usare una password già esistente per testarla con lo stesso metodo.
 
-## 3. Attori👥
+## 3. Attori 👥
 
-ᴜᴛᴇɴᴛᴇ ⇨ 𝖫'𝗎𝗍𝖾𝗇𝗍𝖾 𝖽𝖾𝖼𝗂𝖽𝖾 𝗌𝖾 𝗀𝖾𝗇𝖾𝗋𝖺𝗋𝖾 𝗎𝗇𝖺 𝗉𝖺𝗌𝗌𝗐𝗈𝗋𝖽 𝗌𝖼𝖾𝗀𝗅𝗂𝖾𝗇𝖽𝗈 𝗍𝗋𝖺 𝟥 𝖽𝗂𝖿𝖿𝗂𝖼𝗈𝗅𝗍à
-(𝖥𝖺𝖼𝗂𝗅𝖾, 𝗆𝖾𝖽𝗂𝖺, 𝖽𝗂𝖿𝖿𝗂𝖼𝗂𝗅𝖾), 𝖺𝗉𝗉𝖾𝗇𝖺 𝗀𝖾𝗇𝖾𝗋𝖺𝗍𝖺 𝗅𝖺 𝗉𝖺𝗌𝗌𝗐𝗈𝗋𝖽 𝗅'𝗎𝗍𝖾𝗇𝗍𝖾 𝗉𝗎ò 𝖽𝖾𝖼𝗂𝖽𝖾𝗋𝖾 𝗌𝖾 𝖽𝖾𝖼𝗈𝖽𝗂𝖿𝗂𝖼𝖺𝗋𝗅𝖺 𝗈 𝗇𝗈.
+Utente ⇨ l'utente decide se generare una password scegliendo tra tre livelli di difficoltà (facile, medio, difficile). Dopo aver generato la password, può scegliere se verificarla con un tentativo di decodifica o se mantenerla.
 
-## 4. 📜Requisiti funzionali
+## 4. 📜 Requisiti funzionali
 
-𝖥𝗎𝗇𝗓𝗂𝗈𝗇𝖺𝗅𝗂𝗍à 𝗉𝗋𝗂𝗇𝖼𝗂𝗉𝖺𝗅𝗂:
-- Avviare il programma con un menu a numeri.
-- Gestire input dell'utente (se vuole verificare la password o generarla nuova).
-- Mostrare risultati o statistiche
+Funzionalità principali:
+- avviare il programma con un menu numerato
+- gestire l'input dell'utente per scegliere tra generazione e verifica password
+- mostrare i risultati e le statistiche in modo chiaro
 
-## 5. 📋Gestione del progetto
+## 5. 📋 Gestione del progetto
 
-- Interfaccia a console chiara
-- Gestione degli errori di input
-- Codice organizzato in più file(Package, Moduli)
-- Commenti e documentazione base
+- interfaccia a console chiara
+- gestione degli errori di input
+- codice organizzato in più file (package, moduli)
+- commenti e documentazione di base
 
-## 6. 🗂️Scelta del package Python
+## 6. 🗂️ Scelta dei package Python
 
-- Package scelto: `Random, String, Time`
-- Perché lo abbiamo scelto: `Gli abbiamo scelti perchè ci facilitano il lavoro e non sono troppo complessi`
-- Come lo usiamo nel progetto: `Ad esempio se la password va bene è verde, random per generare la password in modo casuale e String perchè ci fa usare le stringhe meglio e Time perchè ci servivano delle animazioni.`
+- Package scelti:
+  - `random` (standard): genera password casuali
+  - `string` (standard): fornisce insiemi di caratteri come lettere, numeri e simboli
+  - `time` (standard): misura i tempi e gestisce ritardi per l'animazione di stato
+  - `sys` (standard): scrive lo stato sul terminale senza andare a capo ogni volta
+  - `wordfreq` (esterno): genera liste di parole frequenti per l'attacco dizionario
+  - `colorama` (esterno): colora il testo del terminale per rendere l'output più leggibile
+- Perché li abbiamo scelti: sono utili per gestire generazione password, tempo, output terminale e attacchi di codifica in modo semplice
+- Come li usiamo nel progetto: `random` e `string` per la generazione password, `time` per il tempo e l'animazione, `sys` per aggiornare la barra di stato, `wordfreq` per la lista di parole e `colorama` per il colore del testo
 
-## 7. 📑Suddivisione del lavoro
+## 7. 📑  Suddivisione del lavoro
 
-- Studente A: `Alessandro` Si occupa del input password casuale e della decifrazione
-- Studente B: `Felipe` Gestione Password dell'utente (verifica password)
+- Studente A: `Alessandro` - si occupa dell'input della password casuale e della decifrazione
+- Studente B: `Felipe` - gestione della password dell'utente e verifica della sicurezza
 
-## 8. ⚒️Flusso del programma
+## 8. ⚒️  Flusso del programma
 
-- Menu iniziale (Dove l'utente deve selezionare un numero).
-- Può generare password, può verificare se la tua password è sicura o uscire dal programma. `Potrebbe esserci altro`
-- Risultati finali.
+- menu iniziale in cui l'utente seleziona un numero
+- può generare una password, verificare la propria password oppure uscire dal programma
+- visualizzazione dei risultati finali
 
-## 9. ⏱️Cronoprogramma (Gantt semplificato)
+## 9. ⏱️ Cronoprogramma (Gantt semplificato)
 
-- Settimana 1: scelta del tema, ricerca package, stesura requisiti
+- Settimana 1: scelta del tema, ricerca dei package, stesura requisiti
 - Settimana 2: progettazione, divisione del lavoro, avvio sviluppo
 - Settimana 3: completamento funzionalità, test, integrazione package
 - Settimana 4: rifinitura, documentazione, consegna
 
-## 10. 📝Note aggiuntive
+## 10. 📝 Note aggiuntive
 
-Tema semplice senza schermata avanzata, tutto sul CMD e statico, potrebbe contenere ASCII art
-Idee future: se possibile mettere una schermata basica fuori dal cmd
-Difficoltà previste: decodif, organizzare tutto nel main() e imparare i package
+Tema semplice, senza interfaccia grafica avanzata; tutto su CMD e in modo statico. Può contenere anche ASCII art.
+Idee future: se possibile, aggiungere una schermata base fuori dal CMD.
+Difficoltà previste: gestione della decodifica, organizzare tutto nel `menu.py` e imparare a usare i package.
